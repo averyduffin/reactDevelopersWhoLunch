@@ -68,7 +68,7 @@ export default class Post extends React.Component {
         <div className="main">
           <Helmet>
             <title>{titled ? RichText.asText(this.state.doc.data.title) : 'Untitled'}</title>
-            <meta name="description" content="Developer blog" />
+            <meta name="description" content={ titled ? RichText.asText(this.state.doc.data.title) : 'Untitled' } />
             <meta name='keywords' content={this.state.doc.tags.toString()} />
           </Helmet>
           <div className="outer-container">
