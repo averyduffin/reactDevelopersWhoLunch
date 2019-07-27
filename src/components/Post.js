@@ -7,6 +7,7 @@ import ImageCaption from './slices/ImageCaption';
 import {Helmet} from 'react-helmet';
 import Loader from './Loader';
 import Footer from './Footer';
+import Code from './slices/Code';
 
 // Declare your component
 export default class Post extends React.Component {
@@ -51,6 +52,8 @@ export default class Post extends React.Component {
           return <Quote slice={slice} key={'slice-' + index}/>
         case ("text"):
           return <Text slice={slice} key={'slice-' + index} prismicCtx={this.props.prismicCtx}/>
+        case ("code_block"):
+          return <Code slice={slice} key={'slice-' + index}/>
         default:
           return null;
       }
