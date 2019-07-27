@@ -63,6 +63,7 @@ export default class Post extends React.Component {
   render() {
     if (this.state.doc) {
       let titled = this.state.doc.data.title.length !== 0 ;
+      const hasSubTitle = this.state.doc.data.subheader.length !== 0 ;
       return (
         <div className="main">
           <Helmet>
@@ -76,6 +77,9 @@ export default class Post extends React.Component {
             <h1 data-wio-id={this.state.doc.id}>
               {titled ? RichText.asText(this.state.doc.data.title) : 'Untitled'}
             </h1>
+            {hasSubTitle  && <h3 data-wio-id={this.state.doc.id}>
+              {RichText.asText(this.state.doc.data.subheader) }
+            </h3>}
           </div>
           {/* Go through the slices of the post and render the appropiate one */}
           {this.renderSliceZone(this.state.doc.data.body)}
