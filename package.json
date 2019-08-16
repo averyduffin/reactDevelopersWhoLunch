@@ -5,6 +5,7 @@
   "dependencies": {
     "highlight.js": "~9.13.1",
     "history": "^4.9.0",
+    "lodash": "^4.17.15",
     "prismic-javascript": "^2.0.1",
     "prismic-reactjs": "^0.3.2",
     "qs": "^6.4.0",

@@ -85,7 +85,6 @@ export default class Post extends React.Component {
           </div>
           {/* Go through the slices of the post and render the appropiate one */}
           {this.renderSliceZone(this.state.doc.data.body)}
-          <Footer />
         </div>
       );
     } else if (this.state.notFound) {
